@@ -9,15 +9,6 @@ Keys = {
     ['LEFT'] = 174, ['RIGHT'] = 175, ['TOP'] = 27, ['DOWN'] = 173,
 }
 
-QBCore = nil
-
-Citizen.CreateThread(function()
-    while QBCore == nil do
-        TriggerEvent('QBCore:GetObject', function(obj) QBCore = obj end)
-        Citizen.Wait(200)
-    end
-end)
-
 KeyMinigameCallback = {}
 
 RegisterNetEvent('qb-keyminigame:show')
