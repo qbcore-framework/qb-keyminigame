@@ -1,15 +1,13 @@
 KeyMinigameCallback = {}
 
-RegisterNetEvent('qb-keyminigame:show')
-AddEventHandler('qb-keyminigame:show', function()
+RegisterNetEvent('qb-keyminigame:show', function()
 	SendNUIMessage({
         action = "ShowMinigame"
     })
 	SetNuiFocus(true, false)
 end)
 
-RegisterNetEvent('qb-keyminigame:start')
-AddEventHandler('qb-keyminigame:start', function(callback)
+RegisterNetEvent('qb-keyminigame:start', function(callback)
     KeyMinigameCallback = callback
 	SendNUIMessage({
         action = "StartMinigame"
